@@ -40,6 +40,9 @@ keys:
     name:
         type: str
         filter_by: alphanumeric
+    nameAllValues:
+        type: str
+        filter_by: "[a-zA-Z0-9_]"
     iteration:
         type: int
     version:
@@ -55,6 +58,8 @@ keys:
         type: int
     height:
         type: int
+    grp_name:
+        type: str
 
     # Represents the optional output name for frames written by the Shotgun Write Node
     nuke.output:
@@ -119,6 +124,13 @@ keys:
         default: ma
         alias: extension
 
+    # reserve a template key for the maya camera name and render layer name
+    maya.camera_name:
+        type: str
+
+    maya.layer_name:
+        type: str
+
 #
 # The paths section contains all the the key locations where files are to be stored
 # by Sgtk Apps. Each path is made up of several keys (like {version} or {shot}) and
@@ -143,8 +155,10 @@ paths:
     #
     # These don't require the standard formatting (with definition and root_name) because they
     # will be set within each template that uses the alias.
+
     shot_root: 2D/{Shot}
-    asset_root: assets/{sg_asset_type}/{Asset}/{Step}
+    3Dshot_root: 3D/shots/{Shot}
+    asset_root: 3D/assets/{sg_asset_type}/{Asset}
     sequence_root: sequences/{Sequence}
 
 
@@ -173,6 +187,13 @@ paths:
         root_name: 'primary'
     hiero_project_publish_area:
         definition: 'editorial/publish'
+        root_name: 'primary'
+
+
+    # Desktop
+
+    scan_ingestion:
+        definition: '@shot_root/scan/{nameAllValues}.{SEQ}.dpx'
         root_name: 'primary'
 
 
@@ -216,24 +237,39 @@ paths:
 
     # define the location of a work area
     shot_work_area_maya:
-        definition: '@shot_root/work/maya'
+        definition: '@3Dshot_root/scenes'
         root_name: 'primary'
     # define the location of a publish area
     shot_publish_area_maya:
-        definition: '@shot_root/publish/maya'
+        definition: '@3Dshot_root/publish/maya'
         root_name: 'primary'
     # The location of WIP files
     maya_shot_work:
-        definition: '@shot_root/work/maya/{name}.v{version}.{maya_extension}'
+        definition: '@3Dshot_root/scenes/{name}.v{version}.{maya_extension}'
         root_name: 'primary'
     # The location of backups of WIP files
     maya_shot_snapshot:
-        definition: '@shot_root/work/maya/snapshots/{name}.v{version}.{timestamp}.{maya_extension}'
+        definition: '@3Dshot_root/snapshot/{name}.v{version}.{timestamp}.{maya_extension}'
         root_name: 'primary'
     # The location of published maya files
     maya_shot_publish:
-        definition: '@shot_root/publish/maya/{name}.v{version}.{maya_extension}'
+        definition: '@3Dshot_root/publish/maya/{name}.v{version}.{maya_extension}'
         root_name: 'primary'
+    #EXR renders in Maya
+    maya_shot_render_mono_exr:
+        definition: '@3Dshot_root/images/{maya.layer_name}.{name}.v{version}/{maya.layer_name}.{name}.v{version}.{SEQ}.exr'
+        root_name: 'primary'
+    maya_shot_camera:
+        definition: '@3Dshot_root/data/{maya.camera_name}.{name}.v{version}.{maya_extension}'
+        root_name: 'primary'
+    maya_shot_mesh_alembic_cache:
+        definition: '@3Dshot_root/data/{name}[_{grp_name}].v{version}.abc'
+        root_name: 'primary'
+    #EXR render, publish sends them to 2D/CG folder
+    maya_shot_render_publish_mono_exr:
+        definition: '@shot_root/cg/{maya.layer_name}.{name}.v{version}/{maya.layer_name}.{name}.v{version}.{SEQ}.exr'
+        root_name: 'primary'
+
 
 
     #
@@ -358,21 +394,35 @@ paths:
         root_name: 'primary'
     # The location of published nuke script files
     nuke_shot_publish:
-        definition: '@shot_root/publish/{name}.v{version}.nk'
+        definition: '@shot_root/publish/nuke/{name}.v{version}.nk'
         root_name: 'primary'
     # write node outputs
-    nuke_shot_render_mono_exr:
-        definition: '@shot_root/out/{name}/v{version}/{width}x{height}/{Shot}_{name}_{nuke.output}_v{version}.{SEQ}.exr'
-        root_name: 'primary'
-    nuke_shot_render_pub_mono_exr:
-        definition: '@shot_root/publish/exr/{name}/v{version}/{width}x{height}/{Shot}_{name}_{nuke.output}_v{version}.{SEQ}.exr'
-        root_name: 'primary'
     nuke_shot_render_mono_dpx:
-        definition: '@shot_root/out/{name}/v{version}/{width}x{height}/{Shot}_{name}_{nuke.output}_v{version}.{SEQ}.dpx'
+        definition: '@shot_root/out/v{version}/{Shot}_{name}_{nuke.output}_v{version}.{SEQ}.dpx'
         root_name: 'primary'
-    nuke_shot_render_pub_mono_dpx:
-        definition: '@shot_root/publish/dpx/{name}/v{version}/{width}x{height}/{Shot}_{name}_{nuke.output}_v{version}.{SEQ}.dpx'
+    #nuke_shot_render_pub_mono_dpx:
+    #    definition: '@shot_root/publish/dpx/v{version}/{Shot}_{name}_{nuke.output}_v{version}.{SEQ}.dpx'
+    #    root_name: 'primary'
+    #nuke_shot_render_pub_mono_qt:
+    #    definition: '@shot_root/publish/qt/{name}/v{version}/{width}x{height}/{Shot}_{name}_{nuke.output}_v{version}.mov'
+    #    root_name: 'primary'
+    #nuke_shot_render_pub_mono_elements_exr:
+    #    definition: '@shot_root/publish/elements/{nuke.output}/v{version}/{width}x{height}/{Shot}_{name}_{nuke.output}_v{version}.{SEQ}.exr'
+    #    root_name: 'primary'
+    nuke_shot_render_mono_elements_exr:
+        definition: '@shot_root/elements/{nuke.output}/v{version}/{width}x{height}/{Shot}_{name}_{nuke.output}_v{version}.{SEQ}.exr'
         root_name: 'primary'
+    nuke_shot_render_mono_denoise_exr:
+        definition: '@shot_root/denoise/{nuke.output}/v{version}/{width}x{height}/{Shot}_{name}_{nuke.output}_v{version}.{SEQ}.exr'
+        root_name: 'primary'
+    #nuke_shot_render_pub_mono_denoise_exr:
+    #    definition: '@shot_root/publish/denoise/{nuke.output}/v{version}/{width}x{height}/{Shot}_{name}_{nuke.output}_v{version}.{SEQ}.exr'
+    #    root_name: 'primary'
+
+    #####
+    #nuke_shot_scan_path_dpx comes in the sg_desktop app paths
+    #####
+
     #nuke_shot_render_stereo:
     #    definition: '@shot_root/work/images/{name}/v{version}/{width}x{height}/{Shot}_{name}_{nuke.output}_{eye}_v{version}.{SEQ}.exr'
     #    root_name: 'primary'
@@ -380,13 +430,13 @@ paths:
     #    definition: '@shot_root/publish/elements/{name}/v{version}/{width}x{height}/{Shot}_{name}_{nuke.output}_{eye}_v{version}.{SEQ}.exr'
     #    root_name: 'primary'
     # review output
-    shot_quicktime_quick:
-        definition: '@shot_root/publish/qt/{Shot}_{name}_{iteration}.mov'
-        root_name: 'primary'
-    #nuke_shot_render_movie:
-    #   definition: '@shot_root/review/{Shot}_{name}_{nuke.output}_v{version}.mov'
-    #   root_name: 'primary'
 
+    shot_quicktime_quick:
+        definition: '@shot_root/elements/precomp_quicktimes/{Shot}_{name}_{iteration}.mov'
+        root_name: 'primary'
+    nuke_shot_render_movie:
+       definition: '@shot_root/out/Quicktimes/{Shot}_{name}_{nuke.output}_v{version}.mov'
+       root_name: 'primary'
 
 
 
@@ -479,24 +529,30 @@ paths:
     #
 
     # define the location of a work area
-    asset_work_area_maya:
-        definition: '@asset_root/work/maya'
-        root_name: 'primary'
+    #asset_work_area_maya: #work are is the same of asset area, @asset_root.
+    #    definition: '@asset_root/scenes/scenes'
+    #    root_name: 'primary'
     # define the location of a publish area
     asset_publish_area_maya:
-        definition: '@asset_root/publish/maya'
+        definition: '@asset_root/scenes'
         root_name: 'primary'
     # The location of WIP files
     maya_asset_work:
-        definition: '@asset_root/work/maya/{name}.v{version}.{maya_extension}'
+        definition: '@asset_root/scenes/{name}.v{version}.{maya_extension}'
         root_name: 'primary'
     # The location of backups of WIP files
     maya_asset_snapshot:
-        definition: '@asset_root/work/maya/snapshots/{name}.v{version}.{timestamp}.{maya_extension}'
+        definition: '@asset_root/snapshots/{name}.v{version}.{timestamp}.{maya_extension}'
         root_name: 'primary'
     # The location of published maya files
     maya_asset_publish:
-        definition: '@asset_root/publish/maya/{name}.v{version}.{maya_extension}'
+        definition: '@asset_root/publish/{name}.v{version}.{maya_extension}'
+        root_name: 'primary'
+    maya_asset_camera:
+        definition: '@asset_root/data/{name}.v{version}.{maya_extension}'
+        root_name: 'primary'
+    maya_asset_mesh_alembic_cache:
+        definition: '@asset_root/data/{name}[_{grp_name}].v{version}.abc'
         root_name: 'primary'
 
 

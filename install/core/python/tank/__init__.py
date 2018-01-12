@@ -9,7 +9,7 @@
 # not expressly granted therein are reserved by Shotgun Software Inc.
 
 # Toolkit core API version
-__version__ = "v0.18.110"
+__version__ = "v0.18.116"
 
 ########################################################################
 # Establish pipeline configuration context if needed

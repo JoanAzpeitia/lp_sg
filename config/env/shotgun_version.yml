@@ -44,7 +44,7 @@ engines:
         deny_platforms: []
         hook_launch_publish: default
         location:
-          version: v0.2.1
+          version: v0.3.0
           type: app_store
           name: tk-shotgun-launchpublish
         viewer_extensions: [exr, dpx, cin]
@@ -53,7 +53,7 @@ engines:
         viewer_path_windows: '@rv_win'
     debug_logging: false
     location:
-      version: v0.6.0
+      version: v0.7.0
       type: app_store
       name: tk-shotgun
 #

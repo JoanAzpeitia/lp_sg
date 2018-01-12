@@ -138,9 +138,3 @@ class GeneralActions(HookBaseClass):
         from sgtk.platform.qt import QtCore, QtGui
         app = QtCore.QCoreApplication.instance()
         app.clipboard().setText(text)
-        
-           
-
-    
-
-        

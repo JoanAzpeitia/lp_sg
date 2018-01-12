@@ -167,7 +167,7 @@ class PublishDetailsForm(QtGui.QWidget):
         
         # add tasks:
         for task in sg_tasks:
-            label = "%s, %s" % (task["step"]["name"], task["content"])
+            label = "%s" % (task["content"])
             self._ui.sg_task_combo.addItem(label, _ObjWrapper(task))
 
         # reselect selected task if it is still in list:

@@ -501,7 +501,7 @@ class PrimaryPrePublishHook(Hook):
         fields = work_template.get_fields(path)
         fields["TankType"] = output["tank_type"]
         publish_template = output["publish_template"]
-        publish_path = publish_template.apply_fields(fields) 
+        publish_path = publish_template.apply_fields(fields)
         
         if os.path.exists(publish_path):
             raise TankError("A published file named '%s' already exists!" % publish_path)

@@ -148,7 +148,13 @@ class PrePublishHook(Hook):
                 if proxy_mode_on:
                     raise TankError("You cannot publish to Screening Room while Nuke is in proxy "
                                     "mode. Please toggle proxy mode OFF and try again.")
-            
+
+            #elif output["name"] == "quicktime":
+                # Make sure we are sending DPX files.
+            #    renderTemplate = self.__write_node_app.get_node_render_template(write_node_app)
+            #    if renderTemplate
+
+
             else:
                 # don't know how to publish other output types!
                 errors.append("Don't know how to publish this item!")      

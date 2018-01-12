@@ -1,0 +1,83 @@
+# Copyright (c) 2017 Shotgun Software Inc.
+# 
+# CONFIDENTIAL AND PROPRIETARY
+# 
+# This work is provided "AS IS" and subject to the Shotgun Pipeline Toolkit 
+# Source Code License included in this distribution package. See LICENSE.
+# By accessing, using, copying or modifying this work you indicate your 
+# agreement to the Shotgun Pipeline Toolkit Source Code License. All rights 
+# not expressly granted therein are reserved by Shotgun Software Inc.
+
+configuration:
+
+    collector:
+        type: hook
+        description: "Logic for extracting items from the scene and from dropped files."
+        default_value: "{self}/collector.py"
+
+    collector_settings:
+        type: dict
+        description: "Collector-specific configuration settings."
+        default_value: {}
+
+    path_info:
+        type: hook
+        description:
+          "This hook contains methods that are used during publishing to infer
+           information from file paths. This includes version and frame number
+           identification, publish display name, image sequence paths, etc."
+        default_value: "{self}/path_info.py"
+
+    publish_plugins:
+        type: list
+        description: "List of publish plugins."
+        values:
+            type: dict
+            items:
+                name:
+                    type: str
+                hook:
+                    type: hook
+                settings:
+                    type: dict
+        allows_empty: True
+        default_value:
+            # Default hook 1: publish any file to SG
+            - name: Publish to Shotgun
+              hook: "{self}/publish_file.py"
+              settings: {}
+            # Default hook 2: upload known, reviewable types to SG
+            - name: Upload for review
+              hook: "{self}/upload_version.py"
+              settings: {}
+
+    help_url:
+        type: str
+        description:
+          "The url to open when the 'help' button is clicked in the publisher.
+           The url should typically lead to a page that outlines the studio's
+           publishing workflow. If no url is provided, the help button will
+           not be displayed."
+        default_value: ""
+
+# the Shotgun fields that this app needs in order to operate correctly
+requires_shotgun_fields:
+
+# More verbose description of this item 
+display_name: "Publish"
+description: "Provides UI and functionality to publish files to Shotgun."
+
+# Required minimum versions for this item to run
+requires_shotgun_version:
+requires_core_version: "v0.18.72"
+requires_engine_version: 
+
+# this app works in all engines - it does not contain 
+# any host application specific commands
+supported_engines: 
+
+# the frameworks required to run this app
+frameworks:
+    - {"name": "tk-framework-shotgunutils", "version": "v5.x.x"}
+    - {"name": "tk-framework-qtwidgets", "version": "v2.x.x"}
+    

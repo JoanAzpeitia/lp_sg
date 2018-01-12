@@ -21,7 +21,7 @@
 #
 about:
   location:
-    version: v0.2.5
+    version: v0.2.7
     type: app_store
     name: tk-multi-about
 #
@@ -29,10 +29,11 @@ about:
 #
 shotgunpanel:
   location:
-    version: v1.4.8
+    version: v1.4.9
     type: app_store
     name: tk-multi-shotgunpanel
   shotgun_fields_hook: '{self}/shotgun_fields.py'
+  enable_context_switch: true
   actions_hook: '{self}/general_actions.py'
   action_mappings:
     PublishedFile:
@@ -41,8 +42,11 @@ shotgunpanel:
       filters: {}
     Task:
     - actions:
-      - assign_task
+      
+    #  - assign_task
       - task_to_ip
+      - task_to_cmpt
+      - task to_ncmp
       filters: {}
     Version:
     - actions:
@@ -88,7 +92,7 @@ workfiles2:
   hook_scene_operation: default
   launch_at_startup: false
   location:
-    version: v0.9.7
+    version: v0.9.9
     type: app_store
     name: tk-multi-workfiles2
   my_tasks_extra_display_fields: []
@@ -128,7 +132,7 @@ workfiles2-launch-at-startup:
   hook_scene_operation: default
   launch_at_startup: true
   location:
-    version: v0.9.7
+    version: v0.9.9
     type: app_store
     name: tk-multi-workfiles2
   my_tasks_extra_display_fields: []
@@ -151,7 +155,7 @@ workfiles2-launch-at-startup:
 frameworks:
   tk-framework-qtwidgets_v2.x.x:
     location:
-      version: v2.6.5
+      version: v2.6.6
       type: app_store
       name: tk-framework-qtwidgets
   tk-framework-shotgunutils_v4.x.x:

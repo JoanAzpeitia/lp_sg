@@ -1,9 +1,8 @@
 # Shotgun Pipeline Toolkit configuration file
-# This file was automatically created by setup_project
-# This file reflects the paths in the primary pipeline
-# configuration defined for this project.
+# This file reflects the paths in the pipeline configuration
+# entity which is associated with this location
 
-Windows: 'Y:\_PLUGINGS\Shotgun\pipeline_test'
+Windows: 'Y:\_PLUGINGS\Shotgun\TheKillTeam'
 Darwin: ''
 Linux: ''
 

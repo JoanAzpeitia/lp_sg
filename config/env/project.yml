@@ -19,6 +19,8 @@ includes:
 - ./includes/app_launchers.yml
 # common app configurations that are reused across environments
 - ./includes/common_apps.yml
+# include the multi-publish2 settings
+- ./includes/common/settings/tk-multi-publish2.yml
 
 #################################################################################################
 # define all the items that should appear in this environment
@@ -39,7 +41,7 @@ engines:
     compatibility_dialog_min_version: 2017
     debug_logging: false
     location:
-      version: v0.4.1
+      version: v0.5.1
       type: app_store
       name: tk-3dsmaxplus
     menu_favourites: []
@@ -49,17 +51,30 @@ engines:
   # -------------------------------------------------
   tk-desktop:
     apps:
-      tk-multi-launch3dsmax: '@launch_3dsmax'
-      tk-multi-launchhiero: '@launch_hiero'
-      tk-multi-launchhoudini: '@launch_houdini'
-      tk-multi-launchmari: '@launch_mari'
+      #tk-multi-launch3dsmax: '@launch_3dsmax'
+      #tk-multi-launchhiero: '@launch_hiero'
+      #tk-multi-launchhoudini: '@launch_houdini'
+      #tk-multi-launchmari: '@launch_mari'
       tk-multi-launchmaya: '@launch_maya'
-      tk-multi-launchmotionbuilder: '@launch_motionbuilder'
+      #tk-multi-launchmotionbuilder: '@launch_motionbuilder'
       tk-multi-launchnuke: '@launch_nuke'
-      tk-multi-launchnukestudio: '@launch_nukestudio'
+      tk-multi-launchnukex: '@launch_nukex'
+      #tk-multi-launchnukestudio: '@launch_nukestudio'
       tk-multi-launchphotoshopcc: '@launch_photoshopcc'
-      tk-multi-launchsoftimage: '@launch_softimage'
+      #tk-multi-launchsoftimage: '@launch_softimage'
       tk-multi-screeningroom: '@launch_screeningroom'
+      # standalone publishing
+      tk-multi-publish2:
+        collector: '{config}/tk-multi-publish2/basic/collector.py'
+        path_info: '{config}/tk-multi-publish2/basic/path_info.py'
+        publish_plugins:
+        - '@common.settings.tk-multi-publish2.publish_file'
+        - '@common.settings.tk-multi-publish2.upload_version'
+        help_url: https://support.shotgunsoftware.com/hc/en-us/articles/115000067473#Publisher
+        location:
+          version: v1.1.9
+          type: app_store
+          name: tk-multi-publish2
     collapse_rules:
     - {button_label: $app, match: Launch $app, menu_label: None}
     debug_logging: false
@@ -74,7 +89,7 @@ engines:
       name: Finishing Tools
     hook_launch_python: default
     location:
-      version: v2.3.10
+      version: v2.4.2
       type: app_store
       name: tk-desktop
     show_recents: true
@@ -133,7 +148,7 @@ engines:
         hook_secondary_publish: default
         hook_thumbnail: default
         location:
-          version: v0.10.7
+          version: v0.10.9
           type: app_store
           name: tk-multi-publish
         primary_description: Publish and version up the selected Hiero project
@@ -170,7 +185,7 @@ engines:
         hook_scene_operation: default
         launch_at_startup: false
         location:
-          version: v0.9.7
+          version: v0.9.9
           type: app_store
           name: tk-multi-workfiles2
         my_tasks_extra_display_fields: []
@@ -196,7 +211,7 @@ engines:
     compatibility_dialog_min_version: 10
     debug_logging: false
     location:
-      version: v0.8.5
+      version: v0.9.4
       type: app_store
       name: tk-nuke
     menu_favourites:
@@ -218,7 +233,7 @@ engines:
       tk-multi-screeningroom: '@launch_screeningroom'
       tk-multi-workfiles2: '@workfiles2'
     location:
-      version: v1.2.7
+      version: v1.3.0
       type: app_store
       name: tk-houdini
     enable_sg_shelf: true
@@ -261,7 +276,7 @@ engines:
     compatibility_dialog_min_version: 2
     debug_logging: false
     location:
-      version: v1.1.5
+      version: v1.2.0
       type: app_store
       name: tk-mari
   #
@@ -273,11 +288,44 @@ engines:
       tk-multi-about: '@about'
       tk-multi-shotgunpanel: '@shotgunpanel'
       tk-multi-screeningroom: '@launch_screeningroom'
-      tk-multi-workfiles2: '@workfiles2-launch-at-startup'
+      tk-multi-workfiles2:
+        allow_task_creation: false
+        create_new_task_hook: '{self}/create_new_task.py'
+        custom_actions_hook: '{self}/custom_actions.py'
+        entities:
+        - caption: Assets
+          entity_type: Task
+          filters:
+          - [entity, type_is, Asset]
+          hierarchy: [entity.Asset.sg_asset_type, entity, content]
+        - caption: Shots
+          entity_type: Task
+          filters:
+          - [entity, type_is, Shot]
+          hierarchy: [entity.Shot.sg_sequence, entity, content]
+        file_extensions: []
+        hook_copy_file: '{self}/copy_file.py'
+        hook_filter_publishes: default
+        hook_filter_work_files: default
+        hook_scene_operation: '{config}/scene_operation_tk-maya.py'
+        launch_at_startup: true
+        location:
+          version: v0.9.9
+          type: app_store
+          name: tk-multi-workfiles2
+        my_tasks_extra_display_fields: []
+        saveas_default_name: scene
+        saveas_prefer_version_up: false
+        show_my_tasks: false
+        template_publish:
+        template_publish_area:
+        template_work:
+        template_work_area:
+        version_compare_ignore_fields: []
     compatibility_dialog_min_version: 2015
     debug_logging: false
     location:
-      version: v0.8.3
+      version: v0.9.1
       type: app_store
       name: tk-maya
     menu_favourites:
@@ -297,7 +345,7 @@ engines:
       tk-multi-workfiles2: '@workfiles2'
     debug_logging: false
     location:
-      version: v0.3.1
+      version: v0.4.0
       type: app_store
       name: tk-motionbuilder
     menu_favourites:
@@ -314,12 +362,93 @@ engines:
       tk-multi-about: '@about'
       tk-multi-shotgunpanel: '@shotgunpanel'
       tk-multi-screeningroom: '@launch_screeningroom'
-      tk-multi-workfiles2: '@workfiles2'
+      tk-multi-workfiles2:
+        allow_task_creation: false
+        create_new_task_hook: '{self}/create_new_task.py'
+        custom_actions_hook: '{self}/custom_actions.py'
+        entities:
+        - caption: Comp shots
+          entity_type: Task
+          filters:
+          - [entity, type_is, Shot]
+          hierarchy: [entity.Shot.sg_sequence, entity, text.comp.content]
+        file_extensions: []
+        hook_copy_file: '{self}/copy_file.py'
+        hook_scene_operation: '{config}/scene_operation_tk-nuke.py'
+        hook_filter_publishes: default
+        hook_filter_work_files: default
+        hook_scene_operation: default
+        launch_at_startup: false
+        location:
+          version: v0.9.9
+          type: app_store
+          name: tk-multi-workfiles2
+        my_tasks_extra_display_fields: []
+        saveas_default_name: scene
+        saveas_prefer_version_up: false
+        show_my_tasks: false
+        template_publish:
+        template_publish_area:
+        template_work:
+        template_work_area:
+        version_compare_ignore_fields: []
     compatibility_dialog_min_version: 10
     debug_logging: false
     favourite_directories: []
     location:
-      version: v0.8.5
+      version: v0.9.4
+      type: app_store
+      name: tk-nuke
+    menu_favourites:
+    - {app_instance: tk-multi-workfiles2, name: File Open...}
+    project_favourite_name: Shotgun Current Project
+    use_sgtk_as_menu_name: false
+    bin_context_menu: []
+    spreadsheet_context_menu: []
+    timeline_context_menu: []
+  #
+  # -------------------------------------------------
+  # NukeX
+  # -------------------------------------------------
+  tk-nukex:
+    apps:
+      tk-multi-about: '@about'
+      tk-multi-shotgunpanel: '@shotgunpanel'
+      tk-multi-screeningroom: '@launch_screeningroom'
+      tk-multi-workfiles2:
+        allow_task_creation: false
+        create_new_task_hook: '{self}/create_new_task.py'
+        custom_actions_hook: '{self}/custom_actions.py'
+        entities:
+        - caption: Comp shots
+          entity_type: Task
+          filters:
+          - [entity, type_is, Shot]
+          hierarchy: [entity.Shot.sg_sequence, entity, text.comp.content]
+        file_extensions: []
+        hook_copy_file: '{self}/copy_file.py'
+        hook_filter_publishes: default
+        hook_filter_work_files: default
+        hook_scene_operation: default
+        launch_at_startup: false
+        location:
+          version: v0.9.9
+          type: app_store
+          name: tk-multi-workfiles2
+        my_tasks_extra_display_fields: []
+        saveas_default_name: scene
+        saveas_prefer_version_up: false
+        show_my_tasks: false
+        template_publish:
+        template_publish_area:
+        template_work:
+        template_work_area:
+        version_compare_ignore_fields: []
+    compatibility_dialog_min_version: 10
+    debug_logging: false
+    favourite_directories: []
+    location:
+      version: v0.9.4
       type: app_store
       name: tk-nuke
     menu_favourites:
@@ -382,7 +511,7 @@ engines:
         hook_secondary_publish: default
         hook_thumbnail: default
         location:
-          version: v0.10.7
+          version: v0.10.9
           type: app_store
           name: tk-multi-publish
         primary_description: Publish and version up the selected Hiero project
@@ -419,7 +548,7 @@ engines:
         hook_scene_operation: default
         launch_at_startup: false
         location:
-          version: v0.9.7
+          version: v0.9.9
           type: app_store
           name: tk-multi-workfiles2
         my_tasks_extra_display_fields: []
@@ -433,7 +562,7 @@ engines:
         version_compare_ignore_fields: []
       tk-multi-shotgunpanel:
         location:
-          version: v1.4.8
+          version: v1.4.9
           type: app_store
           name: tk-multi-shotgunpanel
         shotgun_fields_hook: '{self}/shotgun_fields.py'
@@ -475,7 +604,7 @@ engines:
     compatibility_dialog_min_version: 10
     debug_logging: false
     location:
-      version: v0.8.5
+      version: v0.9.4
       type: app_store
       name: tk-nuke
     menu_favourites:
@@ -501,7 +630,7 @@ engines:
     - {app_instance: tk-multi-workfiles2, name: File Save...}
     debug_logging: false
     location:
-      version: v1.1.7
+      version: v1.2.1
       type: app_store
       name: tk-photoshopcc
   #
@@ -522,7 +651,7 @@ engines:
       tk-multi-launchsoftimage: '@launch_softimage'
       tk-multi-screeningroom: '@launch_screeningroom'
     location:
-      version: v0.5.4
+      version: v0.6.0
       type: app_store
       name: tk-shell
   #
@@ -537,7 +666,7 @@ engines:
       tk-multi-workfiles2: '@workfiles2'
     debug_logging: false
     location:
-      version: v0.3.2
+      version: v0.3.4
       type: app_store
       name: tk-softimage
     menu_favourites:
@@ -555,7 +684,7 @@ engines:
 frameworks:
   tk-framework-adminui_v0.x.x:
     location:
-      version: v0.1.6
+      version: v0.2.1
       type: app_store
       name: tk-framework-adminui
   tk-framework-softimageqt_v1.0.1:
@@ -565,6 +694,6 @@ frameworks:
       version: v1.0.1
   tk-framework-desktopserver_v1.x.x:
     location:
-      version: v1.2.4
+      version: v1.3.1
       type: app_store
       name: tk-framework-desktopserver

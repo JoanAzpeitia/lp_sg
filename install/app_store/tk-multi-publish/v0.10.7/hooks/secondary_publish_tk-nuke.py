@@ -363,7 +363,7 @@ class PublishHook(Hook):
         render_path = self.__write_node_app.get_node_render_path(write_node)
         render_files = self.__write_node_app.get_node_render_files(write_node)
         render_template = self.__write_node_app.get_node_render_template(write_node)
-        publish_template = self.__write_node_app.get_node_publish_template(write_node)                        
+        publish_template = render_template
         tank_type = self.__write_node_app.get_node_tank_type(write_node)
         
         # publish (copy files):
@@ -374,7 +374,7 @@ class PublishHook(Hook):
             
             progress_cb(25 + (50*(len(render_files)/(fi+1))))
             
-            # construct the publish path:
+            #construct the publish path:
             fields = render_template.get_fields(rf)
             fields["TankType"] = tank_type
             target_path = publish_template.apply_fields(fields)
@@ -387,13 +387,14 @@ class PublishHook(Hook):
             except Exception, e:
                 raise TankError("Failed to copy file from %s to %s - %s" % (rf, target_path, e))
             
-        progress_cb(40, "Publishing to Shotgun")
+        #progress_cb(40, "Publishing to Shotgun")
             
         # use the render path to work out the publish 'file' and name:
         render_path_fields = render_template.get_fields(render_path)
         render_path_fields["TankType"] = tank_type
-        publish_path = publish_template.apply_fields(render_path_fields)
-            
+        #publish_path = publish_template.apply_fields(render_path_fields)
+        publish_path = render_path
+
         # construct publish name:
         publish_name = ""
         rp_name = render_path_fields.get("name")
@@ -406,7 +407,7 @@ class PublishHook(Hook):
             publish_name = rp_name
         else:
             publish_name = "%s, Channel %s" % (rp_name, rp_channel)
-        
+
         publish_version = render_path_fields["version"]
             
         # get/generate thumbnail:

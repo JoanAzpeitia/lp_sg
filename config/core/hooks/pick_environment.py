@@ -32,7 +32,7 @@ class PickEnvironment(Hook):
             # we have a project but not an entity
             return "project"
 
-        if context.entity and context.step is None:
+        if context.entity:
             # we have an entity but no step!
             if context.entity["type"] == "Shot":
                 return "shot"

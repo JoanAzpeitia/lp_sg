@@ -4,11 +4,11 @@ p2
 (dp3
 S'code'
 p4
-S'v0.18.110'
+S'v0.18.116'
 p5
 sS'description'
 p6
-S"A context's source entity is not used to determine equality."
+S'Makes code parsable by the Python3 interpreter, fixes hook-related bug, adds a bundle cache environment variable, adds a new metrics endpoint.'
 p7
 sS'tags'
 p8
@@ -18,11 +18,11 @@ p10
 (dp11
 S'name'
 p12
-S'sgtk_core_v0.18.110.zip'
+S'sgtk_core_v0.18.116.zip'
 p13
 sS'url'
 p14
-S'https://tank.shotgunstudio.com/file_serve/attachment/18348'
+S'https://tank.shotgunstudio.com/file_serve/attachment/18454'
 p15
 sS'content_type'
 p16
@@ -34,7 +34,7 @@ S'Attachment'
 p19
 sS'id'
 p20
-I18348
+I18454
 sS'link_type'
 p21
 S'upload'
@@ -48,11 +48,11 @@ p25
 (dp26
 S'name'
 p27
-S'v0.18.110'
+S'v0.18.116'
 p28
 sS'url'
 p29
-S'https://support.shotgunsoftware.com/hc/en-us/articles/219039838#v0.18.110'
+S'https://support.shotgunsoftware.com/hc/en-us/articles/219039838#v0.18.116'
 p30
 sS'content_type'
 p31
@@ -62,7 +62,7 @@ S'Attachment'
 p33
 sS'id'
 p34
-I18346
+I18452
 sS'link_type'
 p35
 S'web'
@@ -86,7 +86,7 @@ S'Attachment'
 p45
 sS'id'
 p46
-I18347
+I18453
 sS'link_type'
 p47
 S'web'
@@ -97,7 +97,7 @@ S'CustomNonProjectEntity01'
 p50
 sS'id'
 p51
-I572
+I578
 ssS'sg_bundle_data'
 p52
 Ns.

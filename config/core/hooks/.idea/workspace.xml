@@ -9,33 +9,143 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="DockManager">
+    <window id="3">
+      <content type="file-editors">
+        <state>
+          <leaf>
+            <file leaf-file-name="roots.yml" pinned="false" current-in-tab="true">
+              <entry file="file://$PROJECT_DIR$/../roots.yml">
+                <provider selected="true" editor-type-id="text-editor">
+                  <state relative-caret-position="0">
+                    <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+                    <folding />
+                  </state>
+                </provider>
+              </entry>
+            </file>
+          </leaf>
+        </state>
+      </content>
+    </window>
+    <window id="1">
+      <content type="file-editors">
+        <state>
+          <leaf>
+            <file leaf-file-name="menu.py" pinned="false" current-in-tab="true">
+              <entry file="file://$PROJECT_DIR$/../../../../../NukeTools/menu.py">
+                <provider selected="true" editor-type-id="text-editor">
+                  <state relative-caret-position="1125">
+                    <caret line="287" column="63" lean-forward="false" selection-start-line="287" selection-start-column="63" selection-end-line="287" selection-end-column="63" />
+                    <folding>
+                      <element signature="e#44#3206#0" expanded="false" />
+                      <element signature="e#3961#6820#0" expanded="false" />
+                      <element signature="e#3994#6727#0" expanded="false" />
+                      <element signature="e#6881#7916#0" expanded="false" />
+                      <element signature="e#6915#7913#0" expanded="false" />
+                      <element signature="e#7981#8092#0" expanded="false" />
+                      <element signature="e#8410#8421#0" expanded="false" />
+                    </folding>
+                  </state>
+                </provider>
+              </entry>
+            </file>
+          </leaf>
+        </state>
+      </content>
+    </window>
+  </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="pick_environment.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pick_environment.py">
+      <file leaf-file-name="menu.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../../../../../NukeTools/menu.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="867">
-              <caret line="51" column="0" lean-forward="false" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
+            <state relative-caret-position="1205">
+              <caret line="293" column="0" lean-forward="true" selection-start-line="293" selection-start-column="0" selection-end-line="293" selection-end-column="0" />
+              <folding>
+                <element signature="e#44#3206#0" expanded="false" />
+                <element signature="e#3961#6820#0" expanded="false" />
+                <element signature="e#3994#6727#0" expanded="false" />
+                <element signature="e#6881#7916#0" expanded="false" />
+                <element signature="e#6915#7913#0" expanded="false" />
+                <element signature="e#7981#8092#0" expanded="false" />
+                <element signature="e#8410#8421#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="readFromWrite.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/../../../../../NukeTools/python/readFromWrite.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="442">
+              <caret line="26" column="39" lean-forward="true" selection-start-line="26" selection-start-column="39" selection-end-line="26" selection-end-column="39" />
+              <folding>
+                <element signature="e#0#11#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="readFromWrite_02.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../../../../../NukeTools/python/readFromWrite_02.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="219">
+              <caret line="75" column="52" lean-forward="true" selection-start-line="66" selection-start-column="4" selection-end-line="75" selection-end-column="52" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="testReadNode.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/testReadNode.py">
+      <file leaf-file-name="lamppostRead.py" pinned="false" current-in-tab="false">
+        <entry file="file://D:/pipeline/python/lamppostRead.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="11" column="35" lean-forward="false" selection-start-line="11" selection-start-column="35" selection-end-line="11" selection-end-column="35" />
+            <state relative-caret-position="680">
+              <caret line="40" column="69" lean-forward="true" selection-start-line="40" selection-start-column="69" selection-end-line="40" selection-end-column="69" />
+              <folding>
+                <element signature="e#49#60#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="foo.py" pinned="false" current-in-tab="false">
+        <entry file="file://D:/pipeline/python/foo.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="47" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="48" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="info.yml" pinned="false" current-in-tab="true">
-        <entry file="file://D:/python/development/tk-multi-starterapp-master/info.yml">
+      <file leaf-file-name="copy_file.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../../../install/app_store/tk-multi-publish/v0.10.7/hooks/copy_file.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="595">
-              <caret line="35" column="90" lean-forward="false" selection-start-line="35" selection-start-column="90" selection-end-line="35" selection-end-column="90" />
+            <state relative-caret-position="1054">
+              <caret line="62" column="45" lean-forward="true" selection-start-line="62" selection-start-column="45" selection-end-line="62" selection-end-column="45" />
+              <folding>
+                <element signature="e#452#463#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="general_actions.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../../hooks/general_actions.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-1931">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="templates.yml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../templates.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="5354">
+              <caret line="412" column="27" lean-forward="true" selection-start-line="411" selection-start-column="20" selection-end-line="412" selection-end-column="27" />
               <folding />
             </state>
           </provider>
@@ -55,21 +165,34 @@
       <list>
         <option value="$PROJECT_DIR$/../schema/project.yml" />
         <option value="$PROJECT_DIR$/assetManager.py" />
-        <option value="$PROJECT_DIR$/pick_environment.py" />
         <option value="$PROJECT_DIR$/../../env/shot.yml" />
         <option value="$USER_HOME$/Desktop/assets/asset_type/3Dasset" />
         <option value="$USER_HOME$/AppData/Local/Temp/pick_environment.py" />
-        <option value="$PROJECT_DIR$/engine_init.py" />
         <option value="$PROJECT_DIR$/testReadNode.py" />
         <option value="D:/python/development/tk-multi-starterapp-master/info.yml" />
+        <option value="$PROJECT_DIR$/pick_environment.py" />
+        <option value="$PROJECT_DIR$/../../env/project.yml" />
+        <option value="$PROJECT_DIR$/readFromWrite.py" />
+        <option value="$PROJECT_DIR$/engine_init.py" />
+        <option value="$PROJECT_DIR$/../../../../../NukeTools/init.py" />
+        <option value="$PROJECT_DIR$/../../../../../NukeTools/ShotgunWriteNode/initluhb.py" />
+        <option value="$PROJECT_DIR$/../../../../../NukeTools/ShotgunWriteNode/init.py" />
+        <option value="D:/pipeline/python/development/readFromSGWriteOut.py" />
+        <option value="D:/pipeline/python/development/readFromWrite.py" />
+        <option value="$PROJECT_DIR$/../templates.yml" />
+        <option value="D:/pipeline/python/lamppostRead.py" />
+        <option value="D:/pipeline/python/foo.py" />
+        <option value="$PROJECT_DIR$/../../../../../NukeTools/python/readFromWrite_02.py" />
+        <option value="$PROJECT_DIR$/../../../../../NukeTools/menu.py" />
+        <option value="$PROJECT_DIR$/../../../../../NukeTools/python/readFromWrite.py" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="1">
-    <option name="x" value="223" />
-    <option name="y" value="124" />
-    <option name="width" value="1397" />
-    <option name="height" value="1139" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="760" />
+    <option name="y" value="113" />
+    <option name="width" value="1644" />
+    <option name="height" value="1233" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -86,8 +209,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -103,6 +224,8 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -141,9 +264,9 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="223" y="124" width="1397" height="1139" extended-state="1" />
+    <frame x="-8" y="-8" width="2576" height="1416" extended-state="6" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21071687" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21054688" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -167,123 +290,23 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager />
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/../../../../../NukeTools/menu.py</url>
+          <line>218</line>
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/../../../../../NukeTools/python/readFromWrite.py</url>
+          <line>22</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="2" />
+    </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/engine_init.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="16" column="9" lean-forward="false" selection-start-line="16" selection-start-column="9" selection-end-line="16" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pick_environment.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pick_environment.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Temp/pick_environment.py" />
-    <entry file="file://$PROJECT_DIR$/assetManager.py" />
-    <entry file="file://$PROJECT_DIR$/pick_environment.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="867">
-          <caret line="51" column="0" lean-forward="false" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../env/shot.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2669">
-          <caret line="157" column="36" lean-forward="false" selection-start-line="157" selection-start-column="36" selection-end-line="157" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Desktop/sequences/sequence/shot.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="24" column="74" lean-forward="false" selection-start-line="24" selection-start-column="74" selection-end-line="24" selection-end-column="74" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Desktop/assets/asset_type.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Desktop/assets/asset_type/asset.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="22" column="34" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Desktop/assets/asset_type/3Dasset">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="27" column="0" lean-forward="true" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../schema/project/2D/2Dshot.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../env/shot_step.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pick_environment.pyc">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assetManager.py" />
-    <entry file="file://$PROJECT_DIR$/../../env/shot.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2669">
-          <caret line="157" column="36" lean-forward="false" selection-start-line="157" selection-start-column="36" selection-end-line="157" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pick_environment.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="867">
-          <caret line="51" column="0" lean-forward="false" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Desktop/sequences/sequence/shot.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="24" column="74" lean-forward="false" selection-start-line="24" selection-start-column="74" selection-end-line="24" selection-end-column="74" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/Desktop/assets/asset_type.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -385,13 +408,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../templates.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2329">
-          <caret line="137" column="0" lean-forward="false" selection-start-line="137" selection-start-column="0" selection-end-line="145" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../schema/project.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
@@ -400,20 +416,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/assetManager.py" />
-    <entry file="file://$PROJECT_DIR$/../roots.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../env/shot.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2669">
-          <caret line="157" column="36" lean-forward="false" selection-start-line="157" selection-start-column="36" selection-end-line="157" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../../env/shot_step.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -464,10 +466,70 @@
       </provider>
     </entry>
     <entry file="file://$USER_HOME$/AppData/Local/Temp/pick_environment.py" />
+    <entry file="file://D:/python/development/tk-multi-starterapp-master/info.yml" />
+    <entry file="file://$PROJECT_DIR$/testReadNode.py" />
     <entry file="file://$PROJECT_DIR$/engine_init.py">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="26" column="4" lean-forward="true" selection-start-line="26" selection-start-column="4" selection-end-line="26" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../../../NukeTools/ShotgunWriteNode/shotgunWriteNodeBootstrap.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../../../NukeTools/CmdLineRender.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../env/shot.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="422">
+          <caret line="231" column="0" lean-forward="false" selection-start-line="231" selection-start-column="0" selection-end-line="265" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/readFromWrite.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="23" lean-forward="true" selection-start-line="3" selection-start-column="0" selection-end-line="10" selection-end-column="48" />
+          <folding>
+            <element signature="e#2#13#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../../../NukeTools/ShotgunWriteNode/initluhb.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="935">
+          <caret line="55" column="59" lean-forward="true" selection-start-line="55" selection-start-column="59" selection-end-line="55" selection-end-column="59" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../env/project.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="328" column="40" lean-forward="false" selection-start-line="328" selection-start-column="40" selection-end-line="328" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../../../NukeTools/ShotgunWriteNode/init.py">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
-          <caret line="20" column="22" lean-forward="true" selection-start-line="20" selection-start-column="22" selection-end-line="20" selection-end-column="28" />
+          <caret line="20" column="9" lean-forward="false" selection-start-line="20" selection-start-column="9" selection-end-line="20" selection-end-column="9" />
           <folding />
         </state>
       </provider>
@@ -480,19 +542,129 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/testReadNode.py">
+    <entry file="file://$PROJECT_DIR$/../../../../../NukeTools/init.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="35" lean-forward="false" selection-start-line="11" selection-start-column="35" selection-end-line="11" selection-end-column="35" />
+        <state relative-caret-position="0">
+          <caret line="0" column="30" lean-forward="false" selection-start-line="0" selection-start-column="30" selection-end-line="0" selection-end-column="30" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://D:/python/development/tk-multi-starterapp-master/info.yml">
+    <entry file="file://$PROJECT_DIR$/../../../../../NukeTools/custom_guides.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="595">
-          <caret line="35" column="90" lean-forward="false" selection-start-line="35" selection-start-column="90" selection-end-line="35" selection-end-column="90" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/pipeline/python/development/readFromSGWriteOut.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="28" column="37" lean-forward="true" selection-start-line="28" selection-start-column="37" selection-end-line="28" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../../../NukeTools/python/CmdLineRender.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/pipeline/python/development/readFromWrite.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1581">
+          <caret line="93" column="40" lean-forward="false" selection-start-line="93" selection-start-column="40" selection-end-line="93" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../roots.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../templates.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5354">
+          <caret line="412" column="27" lean-forward="true" selection-start-line="411" selection-start-column="20" selection-end-line="412" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/pipeline/python/lamppostRead.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="680">
+          <caret line="40" column="69" lean-forward="true" selection-start-line="40" selection-start-column="69" selection-end-line="40" selection-end-column="69" />
+          <folding>
+            <element signature="e#49#60#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/pipeline/python/foo.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="47" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../install/app_store/tk-multi-publish/v0.10.7/hooks/copy_file.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1054">
+          <caret line="62" column="45" lean-forward="true" selection-start-line="62" selection-start-column="45" selection-end-line="62" selection-end-column="45" />
+          <folding>
+            <element signature="e#452#463#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../hooks/general_actions.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1931">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../../../NukeTools/python/readFromWrite_02.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="219">
+          <caret line="75" column="52" lean-forward="true" selection-start-line="66" selection-start-column="4" selection-end-line="75" selection-end-column="52" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../../../NukeTools/menu.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1205">
+          <caret line="293" column="0" lean-forward="true" selection-start-line="293" selection-start-column="0" selection-end-line="293" selection-end-column="0" />
+          <folding>
+            <element signature="e#44#3206#0" expanded="false" />
+            <element signature="e#3961#6820#0" expanded="false" />
+            <element signature="e#3994#6727#0" expanded="false" />
+            <element signature="e#6881#7916#0" expanded="false" />
+            <element signature="e#6915#7913#0" expanded="false" />
+            <element signature="e#7981#8092#0" expanded="false" />
+            <element signature="e#8410#8421#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../../../NukeTools/python/readFromWrite.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="26" column="39" lean-forward="true" selection-start-line="26" selection-start-column="39" selection-end-line="26" selection-end-column="39" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

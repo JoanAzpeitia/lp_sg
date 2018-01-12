@@ -129,20 +129,21 @@ class NukeQuickDailies(tank.platform.Application):
         # top-right has date
         group_node.node("top_right_text")["message"].setValue(date_formatted)
         
-        # bottom left says
-        # Name#increment
+        ## bottom left says
+        ## Name#increment
         # User
-        bottom_left = "%s " % name.capitalize() if name else ""
-        bottom_left += ("Iteration %d\n" % (iteration))
-        bottom_left += user_name
+        #bottom_left = "%s " % name.capitalize() if name else ""
+        bottom_left = "Qt version: "
+        bottom_left += ("%d\n" % (iteration))
+        bottom_left += "Artist: " + user_name
         group_node.node("bottom_left_text")["message"].setValue(bottom_left)
                 
         # and the slate
         slate_str =  "Project: %s\n" % self.context.project["name"]
         slate_str += "%s: %s\n" % (self.context.entity["type"], self.context.entity["name"])
-        if name:
-            slate_str += "Name: %s\n" % name
-        slate_str += "Iteration: %d\n" % iteration
+        #if name:
+            #slate_str += "Name: %s\n" % name
+        #slate_str += "Iteration: %d\n" % iteration
         
         if self.context.task:
             slate_str += "Task: %s\n" % self.context.task["name"]

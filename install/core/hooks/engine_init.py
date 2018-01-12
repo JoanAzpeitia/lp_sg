@@ -14,16 +14,18 @@ Hook that gets executed every time an engine has fully initialized.
 """
 
 from tank import Hook
+import sgtk
 import os
+
 
 class EngineInit(Hook):
     
-    def execute(self, engine, **kwargs):
+    def execute(self, **kwargs):
         """
         Gets executed when a Toolkit engine has fully initialized.
         At this point, all applications and frameworks have been loaded,
         and the engine is fully operational.
+        :param engine: The current engine being initialised
         """
-        pass
 
-
+    pass

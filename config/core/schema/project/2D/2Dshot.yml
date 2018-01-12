@@ -22,4 +22,7 @@ entity_type: "Shot"
 # three fields: path, relation and values
 # (this is std shotgun API syntax)
 # any values starting with $ are resolved into path objects
-filters: [ { "path": "project", "relation": "is", "values": [ "$project" ] } ]
+filters: 
+  - { "path": "project", "relation": "is", "values": [ "$project" ] }
+#  - { "path": "sg_shot_type", "relation": "is", "values": ["3D and 2D shot"] }
+  - { "path": "sg_shot_type", "relation": "is_not", "values": ["3D shot"] }
